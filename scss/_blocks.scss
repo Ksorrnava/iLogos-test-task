@@ -1,0 +1,97 @@
+//Header
+.header {
+  border-bottom: 1px solid $borders-gray;
+}
+
+.logo {
+  flex: 0 0 auto;
+  max-height: 70px;
+}
+//Main-menu
+.main-menu {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: flex-end;
+  background: $white;
+
+  li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    border-radius: 5px;
+
+    a {
+      padding: 11px 15px;
+      text-decoration: none;
+      display: block;
+    }
+
+    &.active,
+    &:hover {
+      background: $button-blue;
+
+      a {
+        color: $white;
+      }
+    }
+  }
+
+  &.header-menu {
+    padding: $col-padding 0;
+  }
+}
+//Charts
+
+//Footer
+.footer {
+  padding: 10px 0;
+  border-top: 1px solid $borders-gray;
+}
+
+.copy {
+  padding: 11px 0;
+}
+//Responsive
+@include mobile {
+  //Main menu
+  .main-menu {
+    display: block;
+
+    &.header-menu {
+      display: none;
+    }
+
+    &.footer-menu {
+      li {
+        display: block;
+        text-align: center;
+      }
+    }
+
+    &.open {
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 101px;
+      z-index: 5;
+      box-shadow: 0 15px 70px #c3cbd6;
+      padding: $col-padding;
+    }
+  }
+  //Charts
+  .chart-item {
+    &__legend {
+      padding: 10px 0 20px;
+    }
+  }
+  //footer
+  .copy {
+    text-align: center;
+    width: 100%;
+    order: 2;
+  }
+}

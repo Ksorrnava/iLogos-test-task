@@ -1,0 +1,41 @@
+html,
+body {
+  font: #{$font-size}/#{$line-height} $openreg;
+}
+
+h1,
+h2 {
+  font: 24px/30px $openbold;
+}
+
+h3 {
+  font: 20px/25px $openbold;
+}
+
+h4,
+h5 {
+  font: #{$font-size}/#{$line-height} $openbold;
+}
+
+a {
+  color: $button-blue;
+  outline: none;
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  span,
+  div {
+    color: $main-text;
+  }
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.gray-bg {
+  background: $bg-gray;
+}

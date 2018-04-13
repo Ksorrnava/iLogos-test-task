@@ -1,0 +1,56 @@
+.btn {
+  outline: none;
+
+  &-primary {
+    background-color: $button-blue;
+    border: none;
+  }
+
+  &.burger {
+    background: url('../img/burger.png') right 0 no-repeat;
+    width: 20px;
+    height: 16px;
+    flex: 1 1 auto;
+    cursor: pointer;
+    margin: 27px 0;
+    border: none;
+    border-radius: 0;
+
+    &:active {
+      box-shadow: none;
+      background: url('../img/burger_hover.png') right 0 no-repeat;
+    }
+  }
+}
+
+.buttons {
+  flex-wrap: wrap;
+  display: flex;
+  margin: 0 -#{$col-padding};
+
+  .btn {
+    margin: $col-padding;
+    flex-basis: calc(33.333% - #{2*$col-padding});
+  }
+}
+
+.highcharts-button,
+.highcharts-range-selector-buttons{
+  display: none;
+}
+
+.highcharts-container  {
+  top: -28px!important;
+}
+
+@include mobile {
+  .buttons {
+    .btn {
+      flex-basis: 100%;
+    }
+  }
+
+  .highcharts-container  {
+    top: 0!important;
+  }
+}
